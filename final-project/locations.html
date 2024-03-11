@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nil Gooberson's Pizzeria - About Us</title>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js" defer></script>  
+</head>
+<!--https://youtu.be/1UB_VbTamzw?si=PfQw5qyoW39dOhdg-->
+<body>
+    <header class="header">
+
+        <section class="flex">
+     
+           <a href="index.html" class="logo">Nil Gooberson's Pizzeria</a>
+     
+           <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="locations.html">Locations</a>
+            <a href="order.html">Order Now</a>
+            <a href="contact.html">Contact Us and Reviews</a>
+            <a href="js.html">JS</a>
+         </nav>
+         <img class="icon-image" id="signinIcon" src="images/accounticon.png" alt="Sign In"><span id="signinText">Sign in Here!</span>
+         <div id="signinFormContainer" style="display: none;">
+             <form id="signInForm">
+                 <input type="text" id="username" placeholder="Username"><br>
+                 <input type="password" id="password" placeholder="Password"><br>
+                 <button type="submit">Sign In</button>
+                 <input type="reset" id="signOutButton" value="Sign Out">
+             </form>
+         </div>
+    </header>
+    <!--https://tinyjpg.com/-->
+    <main>
+        <h1 class="text-center">Whether you are ordering delivery, carryout, or visiting to eat in person. We are always there!</h1>
+        <section>
+            <h2>Nil Gooberson's Pizzeria Locations</h2>
+            <h3>Los Angeles, California:</h3><span id="locationCali"></span>
+            <h3>New York, NY:</h3><span id="locationNY"></span>
+            <h3>Ottawa, Canada:</h3><span id="locationCan"></span>
+            <h3>Limerick, Ireland:</h3><span id="locationIre"></span>
+            <h3>Ghent, Belgium:</h3><span id="locationBelg"></span>
+            <h3>Cairo, Egypt:</h3><span id="locationEG"></span>
+            <br>
+            <button onclick="getLocation()">Get Location Distances</button>
+        </section>
+        <div class="locationsGallery">
+            <div class="galleryItem">
+                <img src="images/Los_Angeles.jpg" alt="Streetview of Los Angeles">
+                <p>Los Angeles, California</p>
+            </div>
+            <div class="galleryItem">
+                <img src="images/New_York.jpg" alt="Streetview of New York">
+                <p>New York, NY</p>
+            </div>
+            <div class="galleryItem">
+                <img src="images/Ottawa.jpg" alt="Streetview of Ottawa">
+                <p>Ottawa, Canada</p>
+            </div>
+            <div class="galleryItem">
+                <img src="images/Limerick.jpg" alt="Streetview of Limerick">
+                <p>Limerick, Ireland</p>
+            </div>
+            <div class="galleryItem">
+                <img src="images/Ghent.jpg" alt="Streetview of Ghent">
+                <p>Ghent, Belgium</p>
+            </div>
+            <div class="galleryItem">
+                <img src="images/Cairo.jpg" alt="Streetview of Cairo">
+                <p>Cairo, Egypt</p>
+            </div>
+        <!--https://stackoverflow.com/questions/18883601/function-to-calculate-distance-between-two-coordinates-->
+     </main>
+           <footer>
+            <p>&copy; <span id="thisYear"></span> Nil Gooberson's Pizzeria. Copycats will be taken to court.</p>
+        </footer>
+     </body>
+     </html>

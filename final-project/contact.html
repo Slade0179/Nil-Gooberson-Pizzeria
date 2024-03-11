@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nil Gooberson's Pizzeria - About Us</title>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js" defer></script>  
+</head>
+<body>
+    <header class="header">
+
+        <section class="flex">
+     
+           <a href="index.html" class="logo">Nil Gooberson's Pizzeria</a>
+     
+           <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="locations.html">Locations</a>
+            <a href="order.html">Order Now</a>
+            <a href="contact.html">Contact Us and Reviews</a>
+            <a href="js.html">JS</a>
+         </nav>
+         <img class="icon-image" id="signinIcon" src="images/accounticon.png" alt="Sign In"><span id="signinText">Sign in Here!</span>
+         <div id="signinFormContainer" style="display: none;">
+             <form id="signInForm">
+                 <input type="text" id="username" placeholder="Username"><br>
+                 <input type="password" id="password" placeholder="Password"><br>
+                 <button type="submit">Sign In</button>
+                 <input type="reset" id="signOutButton" value="Sign Out">
+             </form>
+         </div>
+    </header>
+    <main> <!--This entire page is what I spent the bulk of my time on, specifically the form I tried to make work towards the bottom (that sadly doesn't work yet)-->
+            <h1 class="text-center">Reviews</h1> <!--This part wasn't so bad, but it took a while to remember how to resize images and also fit them into boxes-->
+            <div class="reviewBoxes">
+				<div class="box">
+					<img src="images/review1.jpg">
+                    <p class="positiveReview">Fast service when we ate at the restaurant! What a great way to bring the family together on the weekend.</p>
+				</div>
+				<div class="box">
+					<img src="images/review2.png">
+                    <p class="negativeReview">This pizza was so cold that I had to cook it a second time...</p>
+				</div>
+				<div class="box">
+					<img src="images/review3.jpg">
+                    <p class="positiveReview">Nil Gooberson's Pizza made my daughter's birthday party amazing!</p>
+				</div>
+				<div class="box">
+					<img src="images/review4.jpg">
+                    <p class="positiveReview">Carryout at Nil's Pizzeria is the way to go! They took only 10 minutes to finish my pizza and it was already done by time I was there!</p>
+				</div>
+				<div class="box">
+					<img src="images/review5.jpg">
+                    <p class="negativeReview">I'm never ordering here again.</p>
+				</div>
+				<div class="box">
+					<img src="images/review6.jpg">
+                    <p class="positiveReview">I asked for their cutest delivery boy and they delivered. I'll be ordering Nil's Pizza from now on!</p>
+				</div>
+                <div class="box">
+                    <p id="userReview"></p>
+				</div>
+			</div>
+
+        <div class="formContainer text-center"> <!--I'll have to spend more time here, but pretty much the last "Review" is reserved for the user and updates with what they input. The site crashes when submitting though.-->
+            <h1>Think our service sucks? Think our pizza is incredible? Tell us anything!</h1>
+            <form id="myForm" name="myForm" method="post">
+                <p>First Name: <input type="text" id="firstName" size="15" /></p>
+                <p>Last Name: <input type="text" id="lastName" size="15" /></p>
+                <p>E-Mail Address: <input type="text" id="userEmail" size="15" /></p>
+                <label>What service did you request?</label>
+                <select id="service">
+                    <option>SELECT HERE</option>
+                    <option>Delivery</option>
+                    <option>Carryout</option>
+                    <option>In-Person Service</option>
+                    <option>Other</option>
+                </select>
+                <br>
+                <label>What do you rate the experience?</label>
+                <select id="userRating">
+                    <option>Please Select...</option>
+                    <option>Good</option>
+                    <option>Bad</option>
+                </select>
+                <br>
+                <textarea cols="40" rows="5" name="comment" id="comments" style="resize: none;" placeholder="Detail your experience here"></textarea>
+                <br>
+                <input type="submit" id="submitForm" value="Submit" name="Submit" />
+            </form>
+        </div>
+    </main>
+           <footer>
+             <p>&copy; <span id="thisYear"></span> Nil Gooberson's Pizzeria. Copycats will be taken to court.</p>
+           </footer>
+     </body>
+     </html>

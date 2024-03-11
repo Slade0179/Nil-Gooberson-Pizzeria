@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--Home Page-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nil Gooberson's Pizzeria</title>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js" defer></script>  
+</head>
+<!--https://youtu.be/1UB_VbTamzw?si=PfQw5qyoW39dOhdg-->
+<!--I initially used this video for an idea, but ultimately ditched it because I couldn't understand much of the CSS they were doing and I didn't feel right fully copying them. It also would have made my own JS harder.
+I found it much easier to go off my previous work along with your other references and past labs that I worked on. I still decided to leave the video here though so you can see what it was like.-->
+<body>
+   <header class="header">
+
+      <section class="flex">
+   
+         <a href="index.html" class="logo">Nil Gooberson's Pizzeria</a>
+   
+         <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="locations.html">Locations</a>
+          <a href="order.html">Order Now</a>
+          <a href="contact.html">Contact Us and Reviews</a>
+          <a href="js.html">JS</a>
+       </nav>
+       <img class="icon-image" id="signinIcon" src="images/accounticon.png" alt="Sign In"><span id="signinText">Sign in Here!</span>
+       <div id="signinFormContainer" style="display: none;">
+           <form id="signInForm">
+               <input type="text" id="username" placeholder="Username"><br>
+               <input type="password" id="password" placeholder="Password"><br>
+               <button type="submit">Sign In</button>
+               <input type="reset" id="signOutButton" value="Sign Out">
+           </form>
+       </div>
+  </header>
+<main> <!--I couldn't come up with much else for the home page since I felt it was better for the about us, but I do plan to add more if I get ideas.-->
+   <section>
+      <article class="homeSlogan">
+         <h2>Delicious Pizza for All!</h2>
+         <p>Order Online. Delivery. Anyway Your Way!</p>
+      </article>
+      <aside> <!--The use of dates from Pets Unleashed inspired me here to apply it to the current day instead of year. I also plan to see if I can make the 20% discount apply in the order page-->
+         <h2>We Love Fridays Deal!</h2>
+         <p id="fridayDeal"></p>
+         <a href="" id="dealLink"><img id="fridayImage" src=""></a>
+      </aside>
+   </section>
+   <aside class="asideRight">
+      <article>
+         <h1>Our Promise</h1>
+      <p>At Nil Gooberson's Pizzeria, we vow that every pizza we make is crafted with passion and care. From our kitchen to your home, we promise to deliver the freshest ingredients, the most delicious flavors, and the warmest service. With every bite, we aim to create moments of joy and satisfaction for our customers. It's not just pizza; it's an experience. We the Residents, swear that all deliveries will arrive in a timely manner, otherwise we will pay far greater than material or money.</p>
+      <p id="aboutLink"><b>Click Here if you would like to learn more about us!</b></p>
+   </article>
+   </aside>
+   <br>
+   <section>
+   <h1 class="text-center" id="personalMessage">Trying to decide delivery or carryout?</h1>
+   <h2 class="text-center">Check for our nearest location!</h2>
+   <div id="locationLink" class="slideshow-images">
+   <img src="images/New_York.jpg">
+   <img src="images/Ghent.jpg">
+   <img src="images/Limerick.jpg">
+   </div>
+   </section>
+</main>
+      <footer> <!--Practically copied from Pets Unleashed, but this is pretty much just done with getFullYear()-->
+        <p>&copy; <span id="thisYear"></span> Nil Gooberson's Pizzeria. Copycats will be taken to court.</p>
+      </footer>
+</body>
+</html>

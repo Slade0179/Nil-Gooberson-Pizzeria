@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nil Gooberson's Pizzeria - About Us</title>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js" defer></script>  
+</head>
+<body>
+    <header class="header">
+
+        <section class="flex">
+     
+           <a href="index.html" class="logo">Nil Gooberson's Pizzeria</a>
+     
+           <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="locations.html">Locations</a>
+            <a href="order.html">Order Now</a>
+            <a href="contact.html">Contact Us and Reviews</a>
+            <a href="js.html">JS</a>
+         </nav>
+         <img class="icon-image" id="signinIcon" src="images/accounticon.png" alt="Sign In"><span id="signinText">Sign in Here!</span>
+         <div id="signinFormContainer" style="display: none;">
+             <form id="signInForm">
+                 <input type="text" id="username" placeholder="Username"><br>
+                 <input type="password" id="password" placeholder="Password"><br>
+                 <button type="submit">Sign In</button>
+                 <input type="reset" id="signOutButton" value="Sign Out">
+             </form>
+         </div>
+    </header>
+    <main> <!--Already said in the header below, but I plan on going more in-depth about each project but also the JS used in this website with images for context.-->
+        <h1 class="text-center">How Javascript was used to create this Website?</h1>
+        <ol class="jsDescription">
+            <li><p>
+                The Home Page used a lot of click events particularly to redirect to other pages with eyecatching images or words that can be clicked on. Although they could have been done with hyperlinks
+                I chose to do them with click events and location.href. The very first thing I created was the function fridayDeal() which was an if event that also used getDate() to check the day. If it was Friday
+                then a special image would show that could be clicked on and redirect you to the orders page, otherwise it would just say "Order on Friday and everything is 20% off!". I couldn't think of much other
+                content that a home page could have other than just news about the franchise or enticing deals.
+                <a href="index.html"><b>Click Here if you want to go to the Home Page.</b></a>
+                </p></li>
+            <li><p>
+                About Page wasn't going to use a lot of Javascript at first since it was just text, but I decided to put time into making an array and event listener for when the user clicks the image that
+                changes the image AND the text below it at the same time. This didn't just use a normal array though, it used a MULTIDIMENSIONAL ARRAY which is one of the first things I challenged myself to try
+                and learn. It was really cool to make work here since it made the JS look a lot more cleaner. This looks completely different from how my Location Page's JS looks.
+                <a href="aboutus.html"><b>Click Here if you want to go to the About Page.</b></a>
+                </p></li>
+            <li><p>
+                Location Page was heavily focused on using geolocation. I tried using a multidimensional array to contain all of the locations, but couldn't figure it out.
+                This was done before I made the "About Page". First the user's longitude and latitude is obtained then a function is run that gets the distance of multiple different locations, then calculates the distance
+                from their current location in miles. This is the formula that I used for this function, but I had to change the radius of the Earth to transfer to miles instead of Kilometers.
+                <a href="aboutus.html"><b>Click Here if you want to go to the Locations Page.</b></a>
+                <a href="https://stackoverflow.com/questions/18883601/function-to-calculate-distance-between-two-coordinates">https://stackoverflow.com/questions/18883601/function-to-calculate-distance-between-two-coordinates</a>
+                </p></li>
+            <li><p>
+                The Order Now Page had used a similar system to the D'oh Grill example which used a form checkbox and stored "values" that were the cost, and then you could "Submit" by evaluating the total with a button
+                and output the result. There is also an option to "Empty Cart" which just resets the evaluated total so you can start fresh. Lastly I decided to follow up with the use of getDate() and the Friday checker I
+                had already used and make it so that when it's Friday and you evaluate the total it applies a 20% coupon and gives feedback to the user that it was applied.
+                <a href="order.html"><b>Click Here if you want to go to the Order Page.</b></a>
+            </p></li>
+            <li><p>
+                The Contact and Reviews page was heavily towards form submission, alerts, and also using a script that got each line of information, concatenated it together, then displayed a NEW box in the reviews
+                alongside the others. I was thinking of having the submitted review stay with localStorage, but I think it would be weird to "undo" it or unsubmit it since usually that's how reviews work, unless it
+                was something like a "Delete Review" option instead. However, I did also have a function that checks the box "Good" and "Bad" that reads and applies the CSS coloring to the corresponding option.
+                <a href="contact.html"><b>Click Here if you want to go to the Contact and Reviews Page.</b></a>
+            </p></li>
+            <li><p>
+                This is just a bonus, but on all pages there is a sign in option. This is a click event that when "clicked" opens a hidden form box. This uses localStorage so that when you fill it in and submit it
+                the information will persist on page refresh and changing between pages on the site. The sign out option just resets it and makes the site forget you as if you just signed out. Lastly it's just a little
+                thing but if you are signed in on the home page then it will give a personal message, and if you sign out it reverts back to normal.
+            </p></li>
+        </ol>
+        <p class="finalThoughts">Final Thoughts - I think I did good on the JS, but some parts can still look pretty ugly. I really don't like how the locations script looks even though it does work.
+        I know it would have been nicer looking if I had gotten the Multidimensional Array to work, but maybe I gave up on it too soon. I think for certain the site would have been better looking if I spent more time on the CSS, 
+        but my thought process was that I wanted to put more work in the JS actually functioning and flexing out how much I could do with it first instead of visuals. I hope I did a good job with Website Responsiveness at the very least.
+        Overall this was so much more fun to do than my CIS133 Website. I think because it was just being able to implement more interactable features instead of just having text, images, and different pages.
+        I think for certain my most favorite stuff to work with was ids/query selectors, functions, if statements, events, geolocation, and maybe forms. Forms were hard to work with sometimes, but it was a fun challenge.
+        </p>
+     </main>
+           <footer>
+             <p>&copy; <span id="thisYear"></span> Nil Gooberson's Pizzeria. Copycats will be taken to court.</p>
+           </footer>
+     </body>
+     </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nil Gooberson's Pizzeria - About Us</title>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js" defer></script>  
+</head>
+<body>
+    <header class="header">
+
+        <section class="flex">
+     
+           <a href="index.html" class="logo">Nil Gooberson's Pizzeria</a>
+     
+           <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="locations.html">Locations</a>
+            <a href="order.html">Order Now</a>
+            <a href="contact.html">Contact Us and Reviews</a>
+            <a href="js.html">JS</a>
+         </nav>
+         <img class="icon-image" id="signinIcon" src="images/accounticon.png" alt="Sign In"><span id="signinText">Sign in Here!</span>
+         <div id="signinFormContainer" style="display: none;">
+             <form id="signInForm">
+                 <input type="text" id="username" placeholder="Username"><br>
+                 <input type="password" id="password" placeholder="Password"><br>
+                 <button type="submit">Sign In</button>
+                 <input type="reset" id="signOutButton" value="Sign Out">
+             </form>
+         </div>
+    </header>
+   <main>
+      <article id="aboutusMain"> <!--No Javascript here that I can think of implementing, but still necessary for a Website I think. It was also pretty fun writing this part in.-->
+         <h1 class="text-center">About Nil Gooberson's Pizzeria</h1>
+         <br>
+         <p>Welcome to Nil Gooberson's Pizzeria, where we're passionate about crafting the perfect pizza. Our journey began in this year 2024 when Nil Gooberson decided to use everything he learned about pizza from his father to cook for others in Ireland. It wasn't long until we helped Nil Gooberson branch out to the United States, Egypt, and Canada now allowing people from a variety of backgrounds to enjoy the pizzas that Nil grew up to love!
+         At Nil Gooberson's Pizzeria, we believe in using only the freshest, locally-sourced ingredients to create pizzas that are bursting with flavor. From our signature Irish-style thick crust to our unfathomable toppings, every single bite is a mouthful of who we are!</p>
+         <p>But it's not just about the pizza - it's about the experience. Whether you're dining in at one of our cozy pizzerias, grabbing a slice on the go to work or school, or ordering delivery to enjoy on your couch, we're dedicated to providing exceptional service and creating memorable moments for our customers.
+         So come join us at Nil Gooberson's Pizzeria and experience the magic of authentic Irish-style pizza for yourself. From our family to yours, we can't wait to serve you!</p>
+      </article>
+      <br><br>
+      <section> <!--This part is where I will use Javascript. I haven't finished it, but plan on doing a Slideshow like the Module 11 Project, except you have to click on it to activate it. The text below will
+      also change depending on which person it is, so maybe an array can be used?-->
+      <h1 class="text-center">Meet the Founders! Click to View More</h1>
+      <div class="boxFounder">
+         <img id="founderImage" src="images/founderadam.png">
+     </div>
+     <p id="founderName" class="founderText"></p>
+     <p id="founderDescription" class="founderText"></p>
+   </section>
+    </main>
+          <footer>
+            <p>&copy; <span id="thisYear"></span> Nil Gooberson's Pizzeria. Copycats will be taken to court.</p>
+          </footer>
+    </body>
+    </html>

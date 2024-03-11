@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nil Gooberson's Pizzeria - About Us</title>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js" defer></script>  
+</head>
+<!--https://youtu.be/1UB_VbTamzw?si=PfQw5qyoW39dOhdg-->
+<body>
+    <header class="header">
+
+        <section class="flex">
+     
+           <a href="index.html" class="logo">Nil Gooberson's Pizzeria</a>
+     
+           <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="locations.html">Locations</a>
+            <a href="order.html">Order Now</a>
+            <a href="contact.html">Contact Us and Reviews</a>
+            <a href="js.html">JS</a>
+         </nav>
+         <img class="icon-image" id="signinIcon" src="images/accounticon.png" alt="Sign In"><span id="signinText">Sign in Here!</span>
+         <div id="signinFormContainer" style="display: none;">
+             <form id="signInForm">
+                 <input type="text" id="username" placeholder="Username"><br>
+                 <input type="password" id="password" placeholder="Password"><br>
+                 <button type="submit">Sign In</button>
+                 <input type="reset" id="signOutButton" value="Sign Out">
+             </form>
+         </div>
+    </header>
+    <br><br>
+    <h1 class="text-center" id="orderUp">Order whatever you crave here!</h1>
+    <main>
+        <section class="box-grid">
+            <form id="menuForm" style="display: contents;">
+                <div class="orderBox text-center"><input type="checkbox" id="cheesePizza" value="8.99"><label for="cheesePizza"><img src="images/cheesepizza.png"></label>Cheese Pizza $8.99</div>
+                <div class="orderBox text-center"><input type="checkbox" id="pepperoniPizza" value="9.99"><label for="pepperoniPizza"><img src="images/pepperonipizza.png"></label>Pepperoni Pizza $9.99</div>
+                <div class="orderBox text-center"><input type="checkbox" id="deluxePizza" value="11.99"><label for="deluxePizza"><img src="images/deluxepizza.png"></label>Deluxe Pizza $11.99</div>
+                <div class="orderBox text-center"><input type="checkbox" id="meatLoversPizza" value="12.99"><label for="meatLoversPizza"><img src="images/meatloverspizza.png"></label>Meat Lover's Pizza $12.99</div>
+                <div class="orderBox text-center"><input type="checkbox" id="chickenBBQPizza" value="12.99"><label for="chickenBBQPizza"><img src="images/chickenbbqpizza.png"></label>Chicken Barbeque Pizza $12.99</div>
+                <div class="orderBox text-center"><input type="checkbox" id="everythingPizza" value="19.99"><label for="everythingPizza"><img src="images/WHATISTHATPIZZA.png"></label>Everything Pizza $19.99</div>
+            </form>
+        <input type="button" onclick="evaluateTotal()" value="Evaluate Total" name="Evaluate Total"/>
+        <input type="button" onclick="resetCart()" value="Empty Cart" name="Empty Cart"/>
+        <!-- <img class="icon-image" src="images/menuicon.png"><span id="cartCount">0</span> Commented out because I'm not sure how to implement this yet. It'll just count all the checked items and display.-->
+        <p id="OrderTotal" class="priceInfo">Total: $0.00</p> <!--This is inspired by the D'oh Grill and Lab #37. There are 2 buttons, soon to be 3 that will total the cost, reset the cart, and pay.-->
+        </section>
+    </main>
+           <footer>
+             <p>&copy; <span id="thisYear"></span> Nil Gooberson's Pizzeria. Copycats will be taken to court.</p>
+           </footer>
+     </body>
+     </html>

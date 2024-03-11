@@ -1,0 +1,400 @@
+/* Adam's CIS166 Final Project
+This is the Stylesheet */
+ 
+ *{
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+	margin:0; padding:0;
+	box-sizing: border-box;
+ }
+ html{
+	margin:0; padding:0;
+	height: 100%;
+	background-color: grey;
+	font-size: 80%;
+	scroll-behavior: smooth;
+	scroll-padding-top: 7.5rem;
+ }
+ 
+ body{
+	background: #a1e9ff;
+	min-height: 100vh;
+	position: relative;
+	padding-bottom: 20px;
+ }
+ 
+ .asideRight {
+	position: relative;
+	float: right;
+	margin-right: 50px;
+	height: 30%;
+	width: 40%;
+	max-width: 500px;
+	background-color: silver;
+	padding: 5px;
+	font-size: 1.5em;
+  }
+
+  .asideRight h1 {
+	text-align: center;
+	font-family: Papyrus;
+  }
+  
+  @media screen and (max-width: 680px) {
+    .asideRight {
+        font-size: 1.3em;
+    }
+} /* This is to make it so the "Our Promise" box also resizes to be smaller and take up less page space for mobile devices. I think there's a better way but this works */
+@media screen and (max-width: 650px) {
+    .asideRight {
+        font-size: 1em;
+    }
+}
+
+  .sectionLeft {
+    position: fixed;
+    top: 250px;
+    left: 50px;
+    width: 400px;
+    background-color: lightblue;
+	border: 1px solid black;
+    padding: 10px;
+    font-size: 1.5em;
+  }
+
+.homeSlogan{
+	text-align: center;
+	font-size: 30px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column; /* Initially set to column */
+    align-items: center;
+}
+
+.nav a {
+    font-size: 15px;
+    padding: 10px 15px;
+    border: 3px solid black;
+    border-radius: 6px;
+    margin: 5px; /* Add margin for spacing between items */
+    text-decoration: none; /* Remove underlines from links */
+}
+
+.nav a:hover {
+    background-color: #333;
+    color: lightblue;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+}
+
+@media screen and (min-width: 650px) {
+    .flex {
+        flex-direction: row;
+    }
+
+    .nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .flex {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+	.nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+} /* I still have to figure out how I want to resize 1024px, but have this here for a placeholder right now */
+
+ a{
+	text-decoration: none;
+	color: inherit;
+ }
+ 
+ section{
+	padding:2rem;
+	margin:0 auto;
+	max-width: 1200px;
+ }
+ 
+ .heading{
+	text-align: center;
+	margin-bottom: 2rem;
+	font-size: 4rem;
+	color: black;
+	text-transform: uppercase;
+ }
+ 
+ .btn{
+	display: block;
+	width: 100%;
+	margin-top: 1rem;
+	border-radius: .5rem;
+	padding:1rem 3rem;
+	font-size: 2rem;
+	color:white;
+	background-color: black;
+	cursor: pointer;
+	text-transform: capitalize;
+	text-align: center;
+ }
+ 
+ .header .flex{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	position: relative;
+	padding: 20px;
+ }
+ 
+ .header .flex .logo{
+	font-family: Lucida Handwriting;
+	font-size: 24px;
+	margin: 2px;
+	color: black;
+	margin: 0 10px;
+ }
+ 
+ .text-center {
+	text-align: center;
+ }
+
+.slideshow-images {
+	cursor: pointer;
+    margin: 20px auto;
+    position: relative;
+    height: 210px;
+	max-height: 100%;
+    width: 210px;
+	max-width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	background-color: white;
+	transition: background-color 0.3s ease;
+}
+
+.slideshow-images:hover {
+	background-color: rgba(255, 215, 0, 0.8);
+}
+
+.slideshow-images img {
+	position: absolute;
+    width: 200px;
+    height: 200px;
+	max-width: 200px;
+	max-height: 200px;
+}
+
+ .icon-image {
+	width: 25px;
+	height: auto;
+ }
+
+ .icon-image:hover {
+	cursor: pointer;
+ }
+
+ #fridayImage {
+	width: 240px;
+	height: auto;
+	border: 3px solid transparent;
+ }
+
+ #fridayImage:hover {
+	border-color: black;
+ }
+
+ #aboutLink {
+	color: darkblue;
+	cursor: pointer;
+  }
+ #aboutusMain {
+	font-size: 1.5em;
+	width: 50%;
+	margin: auto;
+	border: black solid;
+ }
+
+ #locationLink:hover {
+	cursor: pointer;
+ }
+
+ .locationsGallery {
+	display: grid;
+    grid-template-columns: repeat(3, 1fr);
+ }
+
+ .galleryItem {
+	text-align: center;
+ }
+
+ .galleryItem img {
+	height: auto;
+	width: auto;
+    max-width: 100%;
+	max-height: 100%;
+ }
+
+ .container {
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 10px;
+  }
+
+  .reviewBoxes {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.negativeReview {
+	color: red;
+	font-style: italic;
+ }
+
+ .positiveReview {
+	color: blue;
+	font-weight: bold;
+ }
+
+#submitForm {
+	background: #a1e9ff;
+	border: 3px solid black;
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#submitForm:hover {
+	background-color: #333;
+	color: lightblue;
+}
+
+.founderText {
+	text-align: center;
+	font-size: large;
+}
+
+.box-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    border: 3px solid black;
+}
+
+.boxFounder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.boxFounder img:hover {
+	border: 4px solid transparent;
+	border-color: white;
+	cursor: pointer;
+}
+
+.boxFounder img {
+    width: 100%;
+    max-width: 400px;
+	height: 100%;
+	max-height: 400px;
+	object-fit: cover;
+}
+
+.box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: auto;
+	width: auto;
+	max-width: 250px;
+	margin: 10px;
+	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+	padding: 1em 0;
+	position: relative;
+	background-color: silver;
+}
+
+.orderBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: auto;
+	width: auto;
+	max-width: 250px;
+	margin: 10px;
+	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+	padding: 1em 0;
+	position: relative;
+	background-color: silver;
+}
+
+.box img {
+	width: 80%;
+	height: auto;
+	max-width: 100%;
+	margin-bottom: 10px;
+}
+
+.orderBox img {
+	width: 80%;
+	height: auto;
+	max-width: 100%;
+	margin-bottom: 10px;
+	margin-left: 0px;
+}
+
+.orderBox img:hover {
+	border: solid red;
+	cursor: pointer;
+}
+
+.box p {
+	text-align: center;
+	margin: 0;
+}
+/* Fixed with some good help*/
+ footer{
+	position: absolute;
+	text-align: center;
+	left: 0;
+	right: 0;
+	width: 100%;
+	bottom: 0;
+	padding: 5px;
+ }
+
+ .jsDescription {
+	list-style-type: decimal;
+	font-size: 1.2em;
+	margin: 20px;
+ }
+
+ .jsDescription > li {
+	font-style: italic;
+	margin-bottom: 15px;
+ }
+
+ .finalThoughts {
+	font-size: 1.1em;
+ }
